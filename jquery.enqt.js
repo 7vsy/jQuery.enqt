@@ -1,6 +1,6 @@
 /*!
  * jQuery.enqt 
- * Version: 0.1.3
+ * Version: 0.2.0
  * https://github.com/7vsy/jQuery.enqt
  *
  * Copyright(c) 2012 Masato WATANABE <7vsyml@gmail.com>
@@ -37,9 +37,9 @@
     return joinString;
   }
 
-  $.fn[pluginName] = function( duration, delay, styles, callback ) {  
+  $.fn[pluginName] = function( duration, styles, callback ) {  
 
-    var totalDelay = duration + delay;
+    var totalDelay = duration;
     var transformValues = { 
       'translate' : 'translate(0px, 0px)',
       'scale' : 'scale(1, 1)',
@@ -53,7 +53,7 @@
       }
     });
 
-    for (var tfValue in transformValues ){
+    for ( var tfValue in transformValues ){
       if ( styles[tfValue] ){
         if ( tfValue === 'transform' ){
           break;
@@ -79,8 +79,24 @@
         }
       }
     }
-    
-    styles[vendorProperties['transform']] = styles['transform'] || joinTransformValues( transformValues ) || '';
+
+    styles[vendorProperties['transform']] =  styles['transform'] || joinTransformValues( transformValues ) || '';
+
+    if ( typeof styles['ease'] !== "undefined" && styles['ease'] !== null ){
+      styles[vendorProperties['transitionTimingFunction']] = styles['ease'];
+      delete styles['ease'];
+    }else
+      styles[vendorProperties['transitionTimingFunction']] = 'ease';{
+    }
+
+    if ( typeof styles['delay'] !== "undefined" && styles['delay'] !== null ){
+      totalDelay += parseInt( styles['delay'] );
+      styles[vendorProperties['transitionDelay']] = styles['delay'] + 'ms';
+      delete styles['delay'];
+    }else{
+      styles[vendorProperties['transitionDelay']] = '0ms';
+    }
+
 
     return this.each(function(i,elem) {
 
@@ -94,7 +110,6 @@
 
         $(this)
           .css( vendorProperties.transitionDuration, duration + 'ms' )
-          .css( vendorProperties.transitionDelay, delay + 'ms' )
           .css( styles )
           .dequeue();
       }).delay( totalDelay );

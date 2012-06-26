@@ -12,12 +12,11 @@ Include this script after jQuery.
 ```
 ``` javascript
 <script>
-  $(selector).enqt( duration, delay, styles, [callback] );
+  $(selector).enqt( duration, styles, [callback] );
 </script>
 ```
 + `$(selector)` : jQueryObject
 + `duration` : Integer[ms]
-+ `delay` : Integer[ms]
 + `styles` : Object
 + `[callback]` : Function
 
@@ -27,9 +26,9 @@ Include this script after jQuery.
 
 ``` javascript
 $('#maru')
-.enqt( 500,   0, { translate:{ x:'100px', y:'200px'} } )
-.enqt( 1000,  0, { scale:{ x:2,y:2 }, backgroundColor:'#f00' } )
-.enqt( 500, 500, { rotate: '45deg' }, function(){ console.log(123); } );
+.enqt( 500, { translate:{ x:'200px', y:'100px'}, ease: "ease-out" } )
+.enqt( 1000,{ translate:{ x:'200px', y:'100px'}, scale:{ x:2,y:2 }, backgroundColor:'#00f' } )
+.enqt( 500, { rotate: '45deg', delay: 500 }, function(){ console.log(123); } );
 ```
 
 ## Depends
