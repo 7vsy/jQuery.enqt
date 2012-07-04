@@ -1,6 +1,6 @@
 /*!
  * jQuery.enqt 
- * Version: 0.2.0
+ * Version: 0.2.1
  * https://github.com/7vsy/jQuery.enqt
  *
  * Copyright(c) 2012 Masato WATANABE <7vsyml@gmail.com>
@@ -85,8 +85,8 @@
     if ( typeof styles['ease'] !== "undefined" && styles['ease'] !== null ){
       styles[vendorProperties['transitionTimingFunction']] = styles['ease'];
       delete styles['ease'];
-    }else
-      styles[vendorProperties['transitionTimingFunction']] = 'ease';{
+    }else{
+      styles[vendorProperties['transitionTimingFunction']] = 'ease';
     }
 
     if ( typeof styles['delay'] !== "undefined" && styles['delay'] !== null ){
