@@ -1,6 +1,6 @@
 /*!
  * jQuery.enqt 
- * Version: 0.2.1
+ * Version: 0.2.2
  * https://github.com/7vsy/jQuery.enqt
  *
  * Copyright(c) 2012 Masato WATANABE <7vsyml@gmail.com>
@@ -14,10 +14,10 @@
 
   var useCss3Properties = ['transitionProperty', 'transitionDuration', 'transitionDelay', 'transitionTimingFunction', 'transform', 'transformOrigin'];
 
-  var vendorPrefix = /webkit/i.test(navigator.appVersion) ? 'webkit' : 
-                     /firefox/i.test(navigator.userAgent) ? 'Moz' : 
-                     /trident/i.test(navigator.userAgent) ? 'ms' : 
-                     __indexOf.call(window, 'opera') >= 0 ? 'O' : '';
+  this.vendorPrefix = (/webkit/i).test(navigator.appVersion) ? 'webkit' :
+                      (/firefox/i).test(navigator.userAgent) ? 'Moz' :
+                      (/trident/i).test(navigator.userAgent) ? 'ms' :
+                      'opera' in window ? 'O' : '';
 
   var vendorProperties = (function() {
     var rtn = {};
