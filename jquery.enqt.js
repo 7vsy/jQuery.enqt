@@ -1,6 +1,6 @@
 /*!
  * jQuery.enqt 
- * Version: 0.2.2
+ * Version: 0.2.3
  * https://github.com/7vsy/jQuery.enqt
  *
  * Copyright(c) 2012 Masato WATANABE <7vsyml@gmail.com>
@@ -19,6 +19,8 @@
                       (/trident/i).test(navigator.userAgent) ? 'ms' :
                       'opera' in window ? 'O' : '';
 
+  var isTranslate3d = (/Android 4/i).test(navigator.userAgent) ? true : false;
+
   var vendorProperties = (function() {
     var rtn = {};
     $.each(useCss3Properties, function() {
@@ -26,8 +28,6 @@
     });
     return rtn;
   })();
-
-  var isTranslate3d = /Android 4/i.test(navigator.userAgent) ? true : false;
 
   var joinTransformValues = function( obj ){
     var joinString = '';
