@@ -1,6 +1,6 @@
 /*!
  * jQuery.enqt 
- * Version: 0.3.0
+ * Version: 0.3.1
  * https://github.com/7vsy/jQuery.enqt
  *
  * Copyright(c) 2012 Masato WATANABE <7vsyml@gmail.com>
@@ -39,7 +39,7 @@
 
   $.fn[pluginName] = function( styles, duration, easing, callback ) {  
 
-    var totalDelay = duration;
+    var totalDelay = duration || 0;
     var transformValues = { 
       'translate' : 'translate(0px, 0px)',
       'scale' : 'scale(1, 1)',

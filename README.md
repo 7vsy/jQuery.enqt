@@ -12,12 +12,12 @@ Include this script after jQuery.
 ```
 ``` javascript
 <script>
-  $(selector).enqt( styles, duration, [easing], [callback] );
+  $(selector).enqt( styles, [duration], [easing], [callback] );
 </script>
 ```
 + `$(selector)` : jQueryObject
 + `styles` : Object
-+ `duration` : Integer[ms]
++ `[duration]` : Integer[ms]
 + `[easing]` : String
 + `[callback]` : Function
 
