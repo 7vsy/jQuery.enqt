@@ -1,13 +1,13 @@
 /*!
  * jQuery.enqt 
- * Version: 0.2.3
+ * Version: 0.3.0
  * https://github.com/7vsy/jQuery.enqt
  *
  * Copyright(c) 2012 Masato WATANABE <7vsyml@gmail.com>
  * MIT Licensed
  */
 
-;(function ( $, window, undefined ) {
+;(function ( $, window ) {
 
   var pluginName = 'enqt',
       document = window.document;
@@ -37,7 +37,7 @@
     return joinString;
   }
 
-  $.fn[pluginName] = function( duration, styles, callback ) {  
+  $.fn[pluginName] = function( styles, duration, easing, callback ) {  
 
     var totalDelay = duration;
     var transformValues = { 
@@ -82,6 +82,12 @@
 
     styles[vendorProperties['transform']] =  styles['transform'] || joinTransformValues( transformValues ) || '';
 
+    if ( easing && !$.isFunction( easing ) ){
+      styles['ease'] = easing;
+    }else if( easing && $.isFunction( easing ) ){
+      callback = easing;
+    }
+
     if ( typeof styles['ease'] !== "undefined" && styles['ease'] !== null ){
       styles[vendorProperties['transitionTimingFunction']] = styles['ease'];
       delete styles['ease'];
@@ -96,7 +102,6 @@
     }else{
       styles[vendorProperties['transitionDelay']] = '0ms';
     }
-
 
     return this.each(function(i,elem) {
 
