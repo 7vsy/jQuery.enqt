@@ -1,6 +1,6 @@
 /*!
  * jQuery.enqt 
- * Version: 0.3.1
+ * Version: 0.3.2
  * https://github.com/7vsy/jQuery.enqt
  *
  * Copyright(c) 2012 Masato WATANABE <7vsyml@gmail.com>

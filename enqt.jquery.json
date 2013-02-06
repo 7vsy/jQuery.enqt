@@ -30,6 +30,6 @@
     "docs": "https://github.com/7vsy/jQuery.enqt/blob/master/README.md",
     "download": "https://github.com/7vsy/jQuery.enqt/archive/master.zip",
     "dependencies": {
-        "jquery": ">=1.5"
+        "jquery": ">=1.7"
     }
 }

@@ -34,7 +34,7 @@ $('#maru')
 
 ## Depends
 
-* jQuery 1.9.0
+* jQuery >=1.7
 
 ## License
 
