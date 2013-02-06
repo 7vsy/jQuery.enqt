@@ -1,0 +1,35 @@
+{
+    "name": "enqt",
+    "title": "jQuery enqt",
+    "description": "jQuery Plugin for CSS3 Transform.",
+    "keywords": [
+        "transform",
+        "transition",
+        "animation"
+    ],
+    "version": "0.3.1",
+    "author": {
+        "name": "7vsy",
+        "url": "https://github.com/7vsy/"
+    },
+    "maintainers": [
+        {
+            "name": "Masato WATANABE",
+            "email": "7vsyml@gmail.com",
+            "url": "http://msto.jp/"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "bugs": "https://github.com/7vsy/jQuery.enqt/issues",
+    "homepage": "https://github.com/7vsy/jQuery.enqt",
+    "docs": "https://github.com/7vsy/jQuery.enqt/blob/master/README.md",
+    "download": "https://github.com/7vsy/jQuery.enqt/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
