@@ -34,10 +34,10 @@ $('#maru')
 
 ## Depends
 
-* jQuery >=1.7
+* jQuery >=1.7.2
 
 ## License
 
-Copyright(c) 2012 Masato WATANABE  
+Copyright(c) 2013 Masato WATANABE  
 Licensed under the MIT license.
 
