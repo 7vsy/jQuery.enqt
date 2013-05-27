@@ -1,7 +1,8 @@
 # jQuery.enqt
 
 ### jQuery Plugin ###
-This plugin activates several transformations in a particular order.
+This plugin activates several transformations in a particular order.  
+http://plugins.jquery.com/enqt/
 
 ## Usage
 Include this script after jQuery.
